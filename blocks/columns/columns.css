@@ -1,33 +1,43 @@
 .columns > div {
   display: flex;
+}
+
+.columns > div > div:not(.columns-img-col) {
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
 }
 
-.columns img {
-  width: 100%;
+.holidaysection .columns > div > div:not(.columns-img-col) {
+  color: #fff;
+  background-color: rgb(27 37 44);
+  padding-top: 55px;
+  padding-bottom: 55px;
+} 
+
+.holidaysection .columns > div > div.columns-img-col {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.columns > div > div {
-  order: 1;
+.holidaysection .columns > div > div:not(.columns-img-col) h3 a {
+  color: #fff;
 }
 
-.columns > div > .columns-img-col {
-  order: 0;
+.footsection .columns > div > div.columns-img-col {
+  width: 32%;
 }
 
-.columns > div > .columns-img-col img {
-  display: block;
-}
-
-@media (width >= 900px) {
+@media (width < 950px) {
   .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-wrap: wrap;
   }
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
+  .footsection .columns > div > div.columns-img-col {
+    flex-grow: 1;
+    margin-top: 55px;
   }
 }

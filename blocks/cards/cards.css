@@ -3,22 +3,30 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 24px;
+  text-align: center;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
+
 .cards .cards-card-body {
-  margin: 16px;
+  color: #fff;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  text-align: center;
 }
 
 .cards .cards-card-image {
   line-height: 0;
 }
+
 
 .cards > ul > li img {
   width: 100%;

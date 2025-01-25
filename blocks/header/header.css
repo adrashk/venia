@@ -266,3 +266,17 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+@media only screen and (width <= 600px) { 
+header nav .nav-tools {
+  display: none;
+}
+
+header nav .nav-scard {
+  display: none;
+}
+
+header nav .nav-user {
+  display: none;
+}
+}
