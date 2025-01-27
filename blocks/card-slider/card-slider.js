@@ -14,7 +14,7 @@ export default async function decorate(block) {
       return response.json();
     })
     .then((data) => {
-      const carouselData = data.data;
+      const carouselData = data.data.slice(0, 10);
       let chunkSize;
       if (window.innerWidth < 600) {
         chunkSize = Math.ceil(carouselData.length / 5);
